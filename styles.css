@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     align-content: center;
     text-align: center;
+    justify-content: center;
     color: #BCF0BE;
 }
 

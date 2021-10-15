@@ -1,0 +1,36 @@
+@media screen and (max-width: 700px){
+    main {
+        margin-left: 0!important;
+        text-align: center;
+    }
+    
+    .home {
+        margin-top: -10%;
+    }
+    .home h1 {
+        font-size: 80px;
+    }
+
+    .home h3 {
+        font-size: 20px;
+    }
+
+    .conteudo {
+        margin-top: 50px;
+    }
+
+    #lista .item {
+        grid-template-columns: 250px;
+        padding: 5px 5px 5px 5px;
+
+    }
+
+    #lista .item img {
+        width: 100%;
+    }
+
+    #lista .item div {
+        text-align: justify;
+        padding: 10px;
+    }
+}
