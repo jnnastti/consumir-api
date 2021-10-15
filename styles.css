@@ -11,7 +11,7 @@ header {
 }
 
 main {
-    max-width: 1060px;
+    max-width: 1260px;
 }
 
 section {
@@ -57,29 +57,38 @@ h1, h2, h3, h4, h5 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-#lista div {
-    padding: 15px 15px 5px 15px;
+#lista .item {
+    padding: 5px 15px 5px 5px;
     background-color: #DAC1FF;
     border-radius: 10px;
-    display: block;
-    width: 100%;
-    max-width: 250px;
+    display: grid;
+    grid-template-columns: 180px 210px;
     cursor: pointer;
     transition: all 0.2s;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
-#lista div:hover {
+#lista .item:hover {
     box-shadow: 0px 0px 5px 2px rgba(124, 122, 122, 0.65);
     background-color: #C6A0FF;
 }
 
-#lista div img {
-    width: 100%;
-    height: 250px;
+#lista .item h2 {
+    margin-top: 2px;
 }
 
+#lista .item img {
+    width: 170px;
+    height: 170px;
+}
+
+#lista .item p {
+    line-height: 1px;
+}
 footer {
     background-color: #F1C1D0;
     width: 100%;
