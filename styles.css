@@ -1,0 +1,89 @@
+/* https://coolors.co/bcf0be-c6a0ff-dac1ff-f1c1d0-fbf8f0 */
+body {
+    background-color: #FBF8F0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #060E07;
+    overflow-x: hidden;
+}
+
+header {
+    color: #BCF0BE;
+}
+
+main {
+    max-width: 1060px;
+}
+
+section {
+    margin: 10px 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Creepster', cursive;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -9999;
+    background-image: url('./assets/img/rickmorty.jpg');
+    margin: 0 auto;
+}
+
+.home {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #BCF0BE;
+}
+
+.home h1 {
+    font-size: 150px;
+}
+
+.home h3 {
+    font-size: 30px;
+}
+
+#lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#lista div {
+    padding: 15px 15px 5px 15px;
+    background-color: #DAC1FF;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#lista div:hover {
+    box-shadow: 0px 0px 5px 2px rgba(124, 122, 122, 0.65);
+    background-color: #C6A0FF;
+}
+
+#lista div img {
+    width: 100%;
+    height: 250px;
+}
+
+footer {
+    background-color: #F1C1D0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-left: -10px;
+}
