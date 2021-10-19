@@ -3,7 +3,11 @@ window.addEventListener('resize', calculaMargin);
 function calculaMargin() {
   var main = document.getElementsByTagName('main')[0];
 
-  main.style.marginLeft = (window.innerWidth - 1260) / 2
+  var novaMargin = (window.innerWidth - 1260) / 2;
+
+  if(novaMargin > 0) {
+    main.style.marginLeft = novaMargin
+  }
 }
 
 calculaMargin();
@@ -84,16 +88,44 @@ function pegarInfoPersonagem(id) {
 }
 
 function setarCamposEditar(dados) {
-  let id = document.getElementById("id")
   let nome = document.getElementById("nome")
   let status = document.getElementById("status")
   let especie = document.getElementById("especie")
   let imagem = document.getElementById("imagem")
+  let origin = document.getElementById("origin")
+  let location = document.getElementById("location")
+  let listaEpisodio = document.getElementById('episodios')
+
+  nome.innerText = `${dados.id} - ${dados.name}`
+  status.innerText = dados.status
+  especie.innerText = dados.species
+  origin.innerText = dados.origin.name
+  location.innerText = dados.location.name
+
+  imagem.src = dados.image
+  imagem.alt = dados.name
+
+  listaEpisodio.innerHTML = "";
 
   // lista de episodios
+  dados.episode.forEach(function(item) {
+    adicionaEpisodio(item)
+  })
 }
 
-//id, name, status, species e image
+function adicionaEpisodio(episodio) {
+  let a = document.createElement('a');
+  let div = document.createElement('div');
+  let listaEpisodio = document.getElementById('episodios');
+
+  numEpi = episodio.substr(episodio.indexOf('episode/') + 8);
+
+  a.href = episodio;
+  a.innerText = `Episódio ${numEpi}`
+
+  div.appendChild(a)
+  listaEpisodio.appendChild(div)
+}
 
 
 listarPersonagem()

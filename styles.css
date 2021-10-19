@@ -1,7 +1,7 @@
 /* https://coolors.co/bcf0be-c6a0ff-dac1ff-f1c1d0-fbf8f0 */
 body {
     background-color: #FBF8F0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
     color: #060E07;
     overflow-x: hidden;
 }
@@ -19,7 +19,12 @@ section {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Creepster', cursive;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+span {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: lighter;
 }
 
 .background {
@@ -27,7 +32,7 @@ h1, h2, h3, h4, h5 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 40%;
     background-position: center;
     background-size: cover;
     z-index: -9999;
@@ -36,7 +41,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .home {
-    height: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,11 +67,10 @@ h1, h2, h3, h4, h5 {
 }
 
 #lista .item {
-    padding: 5px 15px 5px 5px;
     background-color: #DAC1FF;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 180px 210px;
+    grid-template-columns: 180px 230px;
     cursor: pointer;
     transition: all 0.2s;
     margin-top: 10px;
@@ -79,12 +83,13 @@ h1, h2, h3, h4, h5 {
 }
 
 #lista .item h2 {
-    margin-top: 2px;
+    margin-top: 5px;
 }
 
 #lista .item img {
     width: 170px;
     height: 170px;
+    border-radius: 10px 0 0 10px;
 }
 
 #lista .item p {
@@ -120,6 +125,11 @@ footer {
   .modalDialog h2 {
     margin-top: -15px;
   }
+
+  .modalDialog img {
+    width: 170px;
+    height: 170px;
+  }
   
   .modalDialog:target {
     opacity: 1;
@@ -127,12 +137,14 @@ footer {
   }
   
   .modalDialog > div {
-    width: 700px;
+    max-width: 700px;
     position: relative;
     margin: 3% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #f4f4f4;
+    overflow-y: scroll;
+    height: 450px;
   }
   
   /*close button */
@@ -180,4 +192,38 @@ footer {
   .close .close-container:hover .rightleft{
   transform: rotate(45deg);
   background-color: rgba(158,11,26,1);
+  }
+
+  .modalDialog #episodios {
+      display: flex;
+      flex-direction: row;
+      width: 600px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .modalDialog #episodios div {
+      width: 110px;
+      padding: 5px;
+  }
+  .modalDialog #episodios a {
+      text-decoration: none;
+      color: #060E07;
+      transition: all 0.3s;
+  }
+
+  .modalDialog #episodios a:hover {
+      color: #225c2a;
+      text-decoration: double;
+  }
+
+  .info {
+      display: grid;
+      grid-template-columns: 200px 500px;
+  }
+
+  .items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
   }

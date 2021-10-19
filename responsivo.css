@@ -21,16 +21,25 @@
 
     #lista .item {
         grid-template-columns: 250px;
-        padding: 5px 5px 5px 5px;
-
     }
 
     #lista .item img {
         width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
     }
 
     #lista .item div {
         text-align: justify;
         padding: 10px;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .items {
+        display: block;
     }
 }
